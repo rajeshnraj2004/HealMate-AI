@@ -1,0 +1,268 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background Gradient Hero */
+.image-gradient {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.25;
+  z-index: -3;
+}
+
+.layer-blur {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  width: 30rem;
+  height: 0;
+  box-shadow: 0 0 700px 15px #00ff99;
+  transform: rotate(-30deg);
+  z-index: -2;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+header h1.logo {
+  font-size: 1.8rem;
+  color: #00ff99;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #00ff99;
+}
+
+/* Hero Section */
+.hero-content {
+  position: absolute;
+  top: 40%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+  z-index: 5;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  color: #00ff99;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px #00ff99, 0 0 40px #00ffcc;
+  animation: glow 2s infinite alternate;
+}
+
+.hero-content h2 span {
+  color: #00ffcc;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e6e6e6;
+  text-shadow: 0 0 10px #00ff99;
+  margin-bottom: 2rem;
+}
+
+/* Glow animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+  }
+  to {
+    text-shadow: 0 0 30px #00ff99, 0 0 60px #00ffcc;
+  }
+}
+
+/* Get Started Button */
+.btn-signing {
+  background-color: #00ff99;
+  border: none;
+  color: black;
+  padding: 1rem 2.2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 25px #00ff99;
+}
+
+.btn-signing:hover {
+  background-color: #00cc77;
+  transform: scale(1.05);
+  box-shadow: 0 0 35px #00cc77;
+}
+
+/* AI Doctor Image Hero */
+.ai-doctor-image {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 800px;
+  height: auto;
+  opacity: 0.15;
+  filter: drop-shadow(0 0 25px #00ff99);
+  z-index: 0;
+}
+
+/* About Section */
+.about-section {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  color: #00ff99;
+  overflow: hidden;
+}
+
+.about-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px #00ff99, 0 0 40px #00ffcc;
+  animation: glow 2s infinite alternate;
+}
+
+.about-section h2 span {
+  color: #00ffcc;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #e6e6e6;
+  text-shadow: 0 0 10px #00ff99;
+}
+
+.technologies-used {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.technologies-used li {
+  margin: 10px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.technologies-used li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00ff99;
+  font-weight: bold;
+}
+
+/* About Background */
+.about-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.about-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.about-layer-blur {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 25rem;
+  height: 0;
+  box-shadow: 0 0 600px 15px #00ff99;
+  transform: rotate(-25deg);
+  z-index: -1;
+}
+
+/* AI Doctor Image About */
+.about-ai-doctor {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: auto;
+  opacity: 0.1;
+  filter: drop-shadow(0 0 25px #00ff99);
+  z-index: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    width: 85%;
+    top: 50%;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .btn-signing {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+
+  .ai-doctor-image {
+    width: 400px;
+    opacity: 0.12;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-ai-doctor {
+    width: 300px;
+    opacity: 0.08;
+  }
+
+  .technologies-used {
+    text-align: center;
+  }
+}

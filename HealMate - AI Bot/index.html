@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealMate-AI</title>
+  <link rel="stylesheet" href="/public/styles/style.css" />
+</head>
+<body>
+  <!-- Background Gradient -->
+  <div class="background">
+    <img src="/src/gradient.png.jpg" alt="gradient" class="image-gradient" />
+    <div class="layer-blur"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1 class="logo">HealMate</h1>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="/public/pages/chat.html">CHAT</a>
+      <a href="/public/pages/about.html">ABOUT</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-content">
+    <h2>Welcome to <span>HealMate-AI</span></h2>
+    <p>
+      Your intelligent healthcare companion that uses AI to answer your health queries,  
+      analyze medicine and skin images, and provide instant, accurate insights.  
+      Empowering you to make better health decisions anytime, anywhere.
+    </p>
+
+    <button class="btn-signing">Chat With Your Healmate</button>
+  </section>
+
+  <!-- AI Doctor Image -->
+  <img src="/src/ai-doctor.png.png" alt="AI Doctor" class="ai-doctor-image" />
+
+  <script>
+    document.querySelector('.btn-signing').addEventListener('click', function() {
+      window.location.href = '/public/pages/chat.html';
+    });
+  </script>
+</body>
+</html>
+
