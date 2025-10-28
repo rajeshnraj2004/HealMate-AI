@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealMate AI ChatBot</title>
+    <link rel="stylesheet" href="/chat.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1 class="logo">HealMate</h1>
+      <nav>
+        <a href="/index.html">HOME</a>
+        <a href="/about.html">CHAT</a>
+        <a href="/about.html">ABOUT</a>
+      </nav>
+    </header>
+
+    <!-- MAIN LANDSCAPE LAYOUT -->
+    <div class="main-container">
+      <!-- LEFT SIDE -->
+      <div class="doctor-side">
+        <img src="/ai-doctor.png.png" alt="AI Doctor" class="ai-doctor-image" />
+        <button id="start-chat-btn">Start Chat</button>
+      </div>
+
+      <!-- RIGHT SIDE CHATBOX -->
+      <div id="chatbot-container">
+        <div id="chatbot-header">
+          <span>HealMate Chat</span>
+          <button id="close-btn">✕</button>
+        </div>
+
+        <div id="chat-options">
+          <select id="language-select">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="kn">Kannada</option>
+            <option value="ta">Tamil</option>
+            <option value="te">Telugu</option>
+          </select>
+          <button id="reset-btn">Reset</button>
+        </div>
+
+        <div id="chatbot-body">
+          <div id="chatbot-messages">
+            <div class="message bot">👋 Hi! I'm HealMate — how can I help today?</div>
+          </div>
+        </div>
+
+        <div id="chatbot-input-container">
+          <input type="text" id="chatbot-input" placeholder="Type your message..." />
+          <button id="mic-btn">🎤 Mic</button>
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
